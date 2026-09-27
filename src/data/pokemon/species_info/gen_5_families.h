@@ -153,7 +153,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 83,
         .baseSpAttack  = 60,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
         .catchRate = 45,
         .expYield = 145,
         .evYield_Speed = 2,
@@ -225,7 +225,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 113,
         .baseSpAttack  = 75,
         .baseSpDefense = 95,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
         .evYield_Speed = 3,
@@ -367,7 +367,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 55,
         .baseSpAttack  = 70,
         .baseSpDefense = 55,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
         .catchRate = 45,
         .expYield = 146,
         .evYield_Attack = 2,
@@ -435,7 +435,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 65,
         .baseSpAttack  = 100,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
         .evYield_Attack = 3,
@@ -525,7 +525,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 75,
         .baseSpAttack  = 110,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
         .catchRate = 45,
         .expYield = 264,
         .evYield_Attack = 3,
@@ -659,7 +659,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 83,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 145,
         .evYield_SpAttack = 2,
@@ -718,9 +718,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sDewottLevelUpLearnset,
         .teachableLearnset = sDewottTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SAMUROTT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SAMUROTT, CONDITIONS({IF_TIME, TIME_DAY})}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 36, SPECIES_SAMUROTT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_LEVEL, 36, SPECIES_SAMUROTT_HISUI, CONDITIONS({IF_TIME, TIME_NIGHT})}
                             #endif
                             ),
     },
@@ -733,7 +733,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 108,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
         .evYield_SpAttack = 3,
@@ -2906,7 +2906,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 60,
         .baseSpDefense = 86,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_FAIRY),
         .catchRate = 255,
         .expYield = 390,
         .evYield_HP = 2,
@@ -10582,7 +10582,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 70,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_ICE),
+        .types = MON_TYPES(TYPE_ICE, TYPE_FIGHTING),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_7) ? 177 : 170,
         .evYield_Attack = 2,
@@ -11767,9 +11767,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sRuffletLevelUpLearnset,
         .teachableLearnset = sRuffletTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_BRAVIARY, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_BRAVIARY, CONDITIONS({IF_TIME, TIME_DAY})}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 54, SPECIES_BRAVIARY_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_LEVEL, 54, SPECIES_BRAVIARY_HISUI, CONDITIONS({IF_TIME, TIME_NIGHT})}
                             #endif
                             ),
     },

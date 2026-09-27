@@ -959,7 +959,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 78,
         .baseSpAttack  = 85,
         .baseSpDefense = BLASTOISE_SP_DEF,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
         .catchRate = 45,
         .expYield = BLASTOISE_EXP_YIELD,
         .evYield_SpDefense = 3,
@@ -1031,7 +1031,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 78,
         .baseSpAttack  = 135,
         .baseSpDefense = 115,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
         .evYield_SpDefense = 3,
@@ -1108,7 +1108,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 78,
         .baseSpAttack  = 85,
         .baseSpDefense = BLASTOISE_SP_DEF,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
         .catchRate = 45,
         .expYield = BLASTOISE_EXP_YIELD,
         .evYield_SpDefense = 3,
@@ -1320,7 +1320,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 70,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 90 : 80,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_BUG, TYPE_PSYCHIC),
         .catchRate = 45,
         .expYield = BUTTERFREE_EXP_YIELD,
         .evYield_SpAttack = 2,
@@ -2650,7 +2650,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 55,
         .baseSpAttack  = 40,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 54 : 40,
-        .types = MON_TYPES(TYPE_POISON),
+        .types = MON_TYPES(TYPE_POISON, TYPE_DARK),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 62,
         .evYield_Attack = 1,
@@ -2723,7 +2723,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 65,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 79 : 65,
-        .types = MON_TYPES(TYPE_POISON),
+        .types = MON_TYPES(TYPE_POISON, TYPE_DARK),
         .catchRate = 90,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
         .expYield = 157,
@@ -3958,7 +3958,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
         .baseSpAttack  = 90,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 90,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_NORMAL),
         .catchRate = 75,
         .expYield = RAICHU_EXP_YIELD,
         .evYield_Speed = 3,
@@ -4678,7 +4678,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 76,
         .baseSpAttack  = 75,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 75,
-        .types = MON_TYPES(TYPE_POISON, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_POISON, TYPE_FAIRY),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 253,
@@ -5360,7 +5360,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 100,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 81 : 100,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_FIRE),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_GHOST),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 177 : 178,
         .evYield_Speed = 1,
@@ -6368,7 +6368,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 90,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FAIRY),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 245,
@@ -6549,7 +6549,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 30,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 60 : 80,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
+        .types = MON_TYPES(TYPE_BUG, TYPE_GHOST),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 128,
         .evYield_Attack = 2,
@@ -7679,7 +7679,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 85,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 80,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 174,
         .evYield_SpAttack = 2,
@@ -8477,7 +8477,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 90,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_NORMAL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 250,
@@ -10190,7 +10190,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 105,
         .baseSpAttack  = 80,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_FIRE),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_FAIRY),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 192,
         .evYield_Speed = 2,
@@ -11126,7 +11126,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 58,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 62 : 58,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_FLYING),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
         .expYield = 132,
@@ -11351,7 +11351,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 75,
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_FLYING),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 96,
         .evYield_Attack = 1,
@@ -11437,7 +11437,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 110 : 100,
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_FLYING),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
         .expYield = 165,
@@ -11532,7 +11532,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 45,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 45 : 70,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 100,
         .evYield_SpDefense = 1,
@@ -12810,7 +12810,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 67,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 73 : 115,
         .baseSpDefense = 115,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_DARK),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 169 : 165,
         .evYield_SpDefense = 2,
@@ -13687,9 +13687,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sCuboneLevelUpLearnset,
         .teachableLearnset = sCuboneTeachableLearnset,
         .eggMoveLearnset = sCuboneEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MAROWAK, CONDITIONS({IF_NOT_REGION, REGION_ALOLA})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MAROWAK, CONDITIONS({IF_TIME, TIME_DAY})}
                             #if P_ALOLAN_FORMS
-                                ,{EVO_LEVEL, 28, SPECIES_MAROWAK_ALOLA, CONDITIONS({IF_REGION, REGION_ALOLA}, {IF_TIME, TIME_NIGHT})},
+                                ,{EVO_LEVEL, 28, SPECIES_MAROWAK_ALOLA, CONDITIONS({IF_TIME, TIME_NIGHT})},
                                 {EVO_NONE, 0, SPECIES_MAROWAK_ALOLA_TOTEM}
                             #endif
                             ),
@@ -16932,7 +16932,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 95,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FIGHTING),
         .catchRate = 30,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 270,
@@ -17155,7 +17155,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 83,
         .baseSpAttack  = 125,
         .baseSpDefense = 95,
-        .types = MON_TYPES(TYPE_FIRE),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_DARK),
         .catchRate = 30,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 270,
@@ -18211,16 +18211,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON}
                             #if P_GEN_6_CROSS_EVOS
                                 ,{EVO_LEVEL, 0, SPECIES_SYLVEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_KNOWS_MOVE_TYPE, TYPE_FAIRY})}
+                                ,{EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SYLVEON}
                             #endif
                             #if P_GEN_2_CROSS_EVOS
-                                ,{EVO_LEVEL, 0, SPECIES_ESPEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_NOT_TIME, TIME_NIGHT})},
-                                {EVO_LEVEL, 0, SPECIES_UMBREON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_TIME, TIME_NIGHT})}
+                                ,{EVO_LEVEL, 0, SPECIES_ESPEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_NOT_TIME, TIME_NIGHT})}
+                                ,{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ESPEON}
+                                ,{EVO_LEVEL, 0, SPECIES_UMBREON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_TIME, TIME_NIGHT})}
+                                ,{EVO_ITEM, ITEM_MOON_STONE, SPECIES_UMBREON}
                             #endif
                             #if P_GEN_4_CROSS_EVOS
-                                ,{EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_PETALBURG_WOODS})},
-                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})},
-                                {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON}
+                                ,{EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_PETALBURG_WOODS})}
+                                ,{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON}
+                                ,{EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})}
+                                ,{EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON}
                             #endif
                             ),
     },
@@ -19066,7 +19069,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 135,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_ELECTRIC),
         .catchRate = 30,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 268,
@@ -20361,7 +20364,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 70,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_WATER),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 144,
         .evYield_Attack = 2,

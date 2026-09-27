@@ -149,7 +149,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 83,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FAIRY),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 263,
@@ -426,9 +426,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sQuilavaLevelUpLearnset,
         .teachableLearnset = sQuilavaTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TYPHLOSION, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TYPHLOSION, CONDITIONS({IF_TIME, TIME_DAY})}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 36, SPECIES_TYPHLOSION_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_LEVEL, 36, SPECIES_TYPHLOSION_HISUI, CONDITIONS({IF_TIME, TIME_NIGHT})}
                             #endif
                             ),
     },
@@ -441,7 +441,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 109,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_FIRE),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 267,
@@ -725,7 +725,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 78,
         .baseSpAttack  = 79,
         .baseSpDefense = 83,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_DARK),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 265,
@@ -1082,7 +1082,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 70,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 86 : 76,
         .baseSpDefense = 96,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_FLYING),
         .catchRate = 90,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
         .expYield = 158,
@@ -1239,7 +1239,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 55,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_BUG, TYPE_FIGHTING),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 134,
         .evYield_SpDefense = 2,
@@ -2146,7 +2146,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 55,
         .baseSpAttack  = 115,
         .baseSpDefense = 90,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_DRAGON),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 255,
@@ -3176,7 +3176,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 105,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 149 : 146,
         .evYield_SpAttack = 2,
@@ -3342,7 +3342,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 116,
         .baseSpDefense = 56,
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_BUG, TYPE_DRAGON),
         .catchRate = 30,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 198,
         .evYield_Attack = 2,
@@ -3894,7 +3894,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 85,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GHOST),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_FAIRY),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 87 : 147,
         .evYield_SpAttack = (P_UPDATED_EVS >= GEN_4) ? 0 : 1,
@@ -3975,7 +3975,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 105,
         .baseSpAttack  = 105,
         .baseSpDefense = 105,
-        .types = MON_TYPES(TYPE_GHOST),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_FAIRY),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 187,
         .evYield_SpAttack = 1,
@@ -4978,7 +4978,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 40,
     #if P_UPDATED_TYPES >= GEN_6
-        .types = MON_TYPES(TYPE_FAIRY),
+        .types = MON_TYPES(TYPE_FAIRY, TYPE_FIGHTING),
     #else
         .types = MON_TYPES(TYPE_NORMAL),
     #endif
@@ -5050,7 +5050,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
     #if P_UPDATED_TYPES >= GEN_6
-        .types = MON_TYPES(TYPE_FAIRY),
+        .types = MON_TYPES(TYPE_FAIRY, TYPE_FIGHTING),
     #else
         .types = MON_TYPES(TYPE_NORMAL),
     #endif
@@ -6682,7 +6682,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 65,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GHOST),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_ROCK),
         .catchRate = 60,
         .expYield = 144,
         .evYield_SpDefense = 1,
@@ -6749,7 +6749,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 145,
         .baseSpDefense = 130,
-        .types = MON_TYPES(TYPE_GHOST),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_ROCK),
         .catchRate = 30,
         .expYield = 179,
         .evYield_SpAttack = 2,
@@ -6889,7 +6889,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 45,
         .baseSpAttack  = 105,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIRE),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 164,
         .evYield_Attack = 1,

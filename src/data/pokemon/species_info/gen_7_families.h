@@ -138,9 +138,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         )
         .levelUpLearnset = sDartrixLevelUpLearnset,
         .teachableLearnset = sDartrixTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE, CONDITIONS({IF_TIME, TIME_NIGHT})}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 36, SPECIES_DECIDUEYE_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_LEVEL, 34, SPECIES_DECIDUEYE_HISUI, CONDITIONS({IF_TIME, TIME_DAY})}
                             #endif
                             ),
     },
@@ -2284,7 +2284,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 82,
         .baseSpAttack  = 55,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_ROCK),
+        .types = MON_TYPES(TYPE_ROCK, TYPE_DARK),
         .catchRate = 90,
         .expYield = 170,
         .evYield_Attack = 2,
@@ -2351,7 +2351,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 110,
         .baseSpAttack  = 55,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_ROCK),
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FIGHTING),
         .catchRate = 90,
         .expYield = 170,
         .evYield_Attack = 2,
@@ -3923,7 +3923,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 82,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_FAIRY),
+        .types = MON_TYPES(TYPE_FAIRY, TYPE_GRASS),
         .catchRate = 60,
         .expYield = 170,
         .evYield_SpDefense = 2,
@@ -4064,7 +4064,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 40,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 172,
         .evYield_Attack = 2,

@@ -2435,7 +2435,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpeed     = 68,
         .baseSpAttack  = 97,
         .baseSpDefense = 81,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
         .catchRate = 45,
         .expYield = 186,
         .evYield_HP = 2,
@@ -5144,9 +5144,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGoomyLevelUpLearnset,
         .teachableLearnset = sGoomyTeachableLearnset,
         .eggMoveLearnset = sGoomyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_SLIGGOO, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_SLIGGOO}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 40, SPECIES_SLIGGOO_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_LEVEL, 40, SPECIES_SLIGGOO_HISUI, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}
                             #endif
                             ),
     },
